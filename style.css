@@ -2,11 +2,12 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial;
+    font-family: Roboto, 'Courier New', Courier, monospace;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 26px;
+    letter-spacing: 0.05em;
     color: #1F3F68;
 }
 
@@ -20,7 +21,6 @@
 }
 
 .text {
-    letter-spacing: 0.05em;
     opacity: 0.6;
 }
 
@@ -37,8 +37,10 @@
     text-align: center;
 }
 
-.head_title {
+.section_title {
+    font-weight: 300;
     font-size: 36px;
+    line-height: 46px;
     text-align: center;
 }
 
@@ -57,6 +59,7 @@
     border-radius: 10px;
     text-decoration: none;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 /* Main container properties */
@@ -70,22 +73,17 @@
 /* Page sections properties */
 
 .header {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    box-sizing: border-box;
     height: 768px;
     padding: 34px 113px;
 }
 
-.top_container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 .content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 113px;
+    padding-top: 64px;
 }
 
 .footer {
@@ -107,9 +105,10 @@
     align-self: center;
 }
 
-.top_menu_item:only-child {
-    display: block;
-    margin: auto;
+.top_menu_item_link {
+    display: flex;
+    height: 100%;
+    align-items: center;
 }
 
 /* Header style: Main page header content */
@@ -154,18 +153,42 @@
 /* General content: Main page general content */
 
 .articles_wrapper {
+    margin-top: 64px;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     flex-wrap: wrap;
 }
 
 .article {
     width: 359px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+    box-sizing: border-box;
+    padding: 32px 44px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    margin-bottom: 32px;
+}
+
+.main_contetn_title {
+    color: #000000;
+}
+
+.article_title {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 51px;
+    margin-bottom: 14px;
+}
+
+.full_article_link {
+    font-size: 14px;
+    line-height: 30px;
+    color: #5A98D0;
+    text-decoration: none;
+    margin-top: 30px;
 }
 
 /* General content: Contacts general content */
